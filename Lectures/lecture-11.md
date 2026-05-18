@@ -20,6 +20,7 @@ Traditional Internet routing architecture where:
 - Routers exchange routing information with each other
 - Control logic is distributed across routers
 <img width="443" height="264" alt="Screenshot 2026-05-18 at 3 24 03 PM" src="https://github.com/user-attachments/assets/5469702a-e838-4419-941a-db0fadc6fceb" />
+
 Hence, routers compute routes and forward packets.
  
 ### Software-Defined Networking (SDN) Control Plane
@@ -29,6 +30,7 @@ SDN separates control plane from data plane:
 - Controller installs forwarding rules/tables in routers
 - Simplifies network programmability and management
 <img width="436" height="251" alt="Screenshot 2026-05-18 at 3 27 07 PM" src="https://github.com/user-attachments/assets/d5f4fa6b-a837-4811-80be-2f8ffcde40eb" />
+
 ## Routing Protocols
  
 Protocols determine paths through the network.
@@ -46,9 +48,11 @@ Protocols determine paths through the network.
 Routing decisions influence network performance and scalability.
  
 <img width="278" height="273" alt="Screenshot 2026-05-18 at 3 29 18 PM" src="https://github.com/user-attachments/assets/fb85a89c-3c89-463d-91c9-e559bb2490aa" />
+
 ### Graph Abstraction: Link Costs
  
 <img width="736" height="375" alt="Screenshot 2026-05-18 at 3 31 30 PM" src="https://github.com/user-attachments/assets/511554ff-40d9-4984-aab6-37ffee0fdda9" />
+
 ## Routing Algorithm Classification
  
 ### By Update Frequency
