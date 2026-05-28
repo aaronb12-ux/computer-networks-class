@@ -1,4 +1,4 @@
-## Link Layer: Quiz Study Guide
+## Lecture 14: Link Layer
 
 ---
 
