@@ -1,52 +1,44 @@
-## Link Layer
+## Link Layer: Quiz Study Guide
 
-### Introduction:
+---
 
-**Nodes:** hosts, switches, routers
+## Key Concepts
+
+**Nodes:** Hosts, switches, routers
 
 **Links:** Communication channels connecting adjacent nodes
-- May be wired (Ethernet) or wireless (WiFi)
+- Wired (Ethernet) or wireless (WiFi)
 
-<img width="274" height="282" alt="Screenshot 2026-05-28 at 1 31 53 AM" src="https://github.com/user-attachments/assets/a9381aa7-de43-4174-8c52-28cd4690ae8d" />
-
-**Link Layer is responsible for hop-by-hop delivery:**
+**Link Layer Responsibility:** Hop-by-hop delivery
 - **Network Layer:** Decides where packet should go
 - **Link Layer:** Determines how to move packets across each link
 
 ---
 
-### Link Layer: Context
+## Link Layer Context
 
-End-to-end communication may traverse multiple links.
-
-Different links may use different link-layer technologies.
-
-**Example:**
-Laptop → WiFi → Access Point → Ethernet → PC
-
-Some IP datagrams may be carried by different frame formats on different links.
-
-Different link-layer protocols may provide different services.
+**Multi-link communication:**
+- End-to-end communication may traverse multiple links
+- Different links may use different technologies
+- Different protocols may provide different services
+- Example: Laptop → WiFi → Access Point → Ethernet → PC
 
 ---
 
-### Link Layer: Services
+## Link Layer Services
 
+### Core Services:
 **Framing:** Encapsulates datagram into frame
 
-**Link Access:** Control access to a shared medium
+**Link Access:** Control access to shared medium
 
 **MAC Addressing:** Source and destination MAC addresses identify devices
 
 **Reliable Delivery:** Optional retransmission between adjacent nodes
-- Why Reliability at link layer: Avoid expensive retransmissions. Particularly useful for wireless links with higher error rates
+- Avoids expensive end-to-end retransmissions
+- Particularly useful for wireless links (higher error rates)
 
-<img width="258" height="297" alt="Screenshot 2026-05-28 at 1 45 44 AM" src="https://github.com/user-attachments/assets/7b6524da-a37b-48d1-bbec-cf47b3a219ee" />
-
----
-
-### More Services:
-
+### Additional Services:
 **Flow Control:** Prevent sender from overwhelming receiver
 
 **Error Detection:** Detect corrupted frames
@@ -55,64 +47,62 @@ Different link-layer protocols may provide different services.
 
 **Half Duplex:** Only one side transmits at a time
 
-**Full Duplex:** Both sides may transmit simultaneously
+**Full Duplex:** Both sides transmit simultaneously
 
 ---
 
-### Host Link-Layer Implementation
+## Link Layer Implementation
 
-Link Layer is implemented in the **Network Interface Card (NIC)**.
-
-**NIC:** Typically implements both link and physical layer
-
-**Functionality of NIC:**
-- Framing
-- MAC processing
-- Error detection
-
-Link layer can be implemented in hardware and software.
-
-<img width="244" height="269" alt="Screenshot 2026-05-28 at 1 49 46 AM" src="https://github.com/user-attachments/assets/0d18d5c4-a664-4e04-9605-11ffc95e040c" />
+**Network Interface Card (NIC):**
+- Implements both link and physical layer
+- Can be hardware or software
+- Functionality: Framing, MAC processing, error detection
 
 ---
 
-### Interfaces Communicating:
-
-<img width="518" height="174" alt="Screenshot 2026-05-28 at 1 50 25 AM" src="https://github.com/user-attachments/assets/1955c595-905e-42ec-8b0d-1a16662b1ba4" />
+## Frame Communication
 
 **Sender:**
 - Data encapsulation
 - Add error-checking info
-- May perform flow control and reliability functions
+- Perform flow control and reliability functions
 
 **Receiver:**
-- Checks for errors
-- Performs reliability functions
-- Extracts datagram from frame and passes to network layer
+- Check for errors
+- Perform reliability functions
+- Extract datagram from frame and pass to network layer
 
 ---
 
-### Error Detection
+## Error Detection
 
-**EDC:** Error detection and correction bits (e.g., redundancy)
+**EDC:** Error detection and correction bits (redundancy)
 
-**D:** Data protected by error checking, may include header fields
-
-<img width="399" height="211" alt="Screenshot 2026-05-28 at 1 54 28 AM" src="https://github.com/user-attachments/assets/f7db40a6-fb8e-448c-a5a2-7da67d24d177" />
+**D:** Data protected by error checking (may include header fields)
 
 **Process:**
 - Receiver recomputes EDC and compares results
-- If mismatch: Error detected
+- Mismatch = Error detected
 - Error detection is not perfect
-- Larger EDC fields generally provide stronger protection
+- Larger EDC fields provide stronger protection
 
 ---
 
-### Key Points:
+## Key Distinctions
 
-- Link layer operates between adjacent nodes
-- Different links may use different technologies
-- MAC addresses identify devices at link layer (vs. IP addresses at network layer)
-- Error detection adds redundancy but cannot guarantee detection of all errors
+| Layer | Addressing | Scope |
+|-------|-----------|-------|
+| Link Layer | MAC addresses | Between adjacent nodes (hop-by-hop) |
+| Network Layer | IP addresses | End-to-end |
 
+---
 
+## Quiz Reminders
+
+1. Link layer operates **between adjacent nodes** only
+2. Different links may use **different technologies**
+3. **MAC addresses** ≠ **IP addresses**
+4. Error detection uses **redundancy** but cannot guarantee detection
+5. Link layer has **multiple services** (framing, access control, error detection, flow control, etc.)
+6. **NIC** implements link AND physical layer
+7. Reliable delivery at link layer is **optional**
