@@ -412,11 +412,29 @@ High jitter can cause problems for real-time applications:
 
 ### Transmission Delay
 
-:contentReference[oaicite:3]{index=3}
+```text
+Dtrans = L / R
+```
+
+Where:
+
+- `L` = Packet Length (bits)
+- `R` = Transmission Rate (bits/sec)
+
+---
 
 ### Propagation Delay
 
-:contentReference[oaicite:4]{index=4}
+```text
+Dprop = d / s
+```
+
+Where:
+
+- `d` = Distance between nodes
+- `s` = Propagation speed of the medium
+
+---
 
 ### Total Nodal Delay
 
@@ -424,7 +442,23 @@ High jitter can cause problems for real-time applications:
 dnodal = dproc + dqueue + dtrans + dprop
 ```
 
-### Bandwidth-Delay Product
+Where:
 
-:contentReference[oaicite:5]{index=5}
+- `dproc` = Processing Delay
+- `dqueue` = Queueing Delay
+- `dtrans` = Transmission Delay
+- `dprop` = Propagation Delay
+
+---
+
+### Bandwidth-Delay Product (BDP)
+
+```text
+BDP = Bandwidth × RTT
+```
+
+Where:
+
+- `Bandwidth` = Link capacity
+- `RTT` = Round-Trip Time
   
