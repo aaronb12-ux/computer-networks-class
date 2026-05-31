@@ -50,12 +50,14 @@ Transmission delay depends on:
 
 Formula:
 
-:contentReference[oaicite:0]{index=0}
+```text
+Dtrans = L / R
+```
 
 Where:
 
-- \(L\) = packet length (bits)
-- \(R\) = transmission rate (bits/sec)
+- `L` = Packet Length (bits)
+- `R` = Transmission Rate (bits/sec)
 
 ---
 
@@ -70,12 +72,14 @@ Depends on:
 
 Formula:
 
-:contentReference[oaicite:1]{index=1}
+```text
+Dprop = d / s
+```
 
 Where:
 
-- \(d\) = distance
-- \(s\) = propagation speed
+- `d` = Distance between nodes
+- `s` = Propagation speed of the medium
 
 ---
 
@@ -225,11 +229,13 @@ The Bandwidth-Delay Product (BDP) is the maximum amount of data that can be "in 
 
 ## Formula
 
-:contentReference[oaicite:2]{index=2}
+```text
+BDP = Bandwidth × RTT
+```
 
 Where:
 
-- **Bandwidth** = link capacity
+- **Bandwidth** = Link Capacity
 - **RTT** = Round-Trip Time
 
 ---
@@ -459,6 +465,5 @@ BDP = Bandwidth × RTT
 
 Where:
 
-- `Bandwidth` = Link capacity
+- `Bandwidth` = Link Capacity
 - `RTT` = Round-Trip Time
-  
