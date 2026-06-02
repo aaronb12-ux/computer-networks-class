@@ -394,3 +394,13 @@ What are consequences of queueing at an output port?
 - Potential packet loss due to full buffers
 - Variable wait times depending on arrival rate
 - Jitter
+
+## Question 21
+
+**Question**
+In a generic router architecture, what components belong to the control plane (routing plane)? 
+
+The routing processor that runs routing protocols
+creating the routing table
+
+
