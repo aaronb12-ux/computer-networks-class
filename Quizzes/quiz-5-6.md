@@ -394,6 +394,8 @@ What are consequences of queueing at an output port?
 - Potential packet loss due to full buffers
 - Variable wait times depending on arrival rate
 - Jitter
+  
+---
 
 ## Question 21
 
