@@ -1,4 +1,4 @@
- # Networking Quiz (Clean Version)
+# Networking Quiz (Clean Version)
 
 ---
 
@@ -157,5 +157,32 @@
 
 ## 28. In distance-vector routing, what two values are added?
 - Link cost + neighbor’s advertised distance  
+
+---
+
+## 29. In NAT, what distinguishes connections sharing one public IP?
+- Port numbers (specifically NAT-assigned source ports)
+
+---
+
+## 30. What metric describes variability in packet delay?
+- Jitter  
+
+---
+
+## 31. What does Pure ALOHA do differently compared to Slotted ALOHA?
+- Pure ALOHA allows transmissions at any time, while Slotted ALOHA restricts transmissions to fixed time slots  
+
+---
+
+## 32. A station is counting down to transmit data. It senses the channel is busy and enters freeze period. What happens next if it senses idle again?
+- The station resumes its countdown from where it left off  
+
+---
+
+## 33. Which IEEE 802.11 structure contains an AP and stations?
+- Basic Service Set (BSS)
 ```
+
+
 
